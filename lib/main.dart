@@ -35,220 +35,280 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text("凡才プログラマー"),
+        backgroundColor: const Color.fromARGB(255, 23, 22, 22),
+        title: const Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text(
+              "＜  凡才プログラマー",
+              style: TextStyle(color: Colors.white),
+            ),
+          ],
+        ),
+        // centerTitle: false,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Center(
-          child: ListView(
-            children: <Widget>[
-              SizedBox(
-                height: 100,
-                width: double.infinity,
-                child: Image.asset(
-                  "assets/images/header.jpeg",
-                  fit: BoxFit.cover,
+      body: Container(
+        color: const Color.fromARGB(255, 23, 22, 22),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Center(
+            child: ListView(
+              children: <Widget>[
+                SizedBox(
+                  height: 100,
+                  width: double.infinity,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: Image.asset(
+                      "assets/images/header.jpg",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
+                Row(
                   children: [
                     SizedBox(
-                        width: 70,
-                        child: Image.asset("assets/images/faceIcon.jpg")),
-                    const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "凡才プログラマー",
-                          style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
-                        ),
-                        Text("@Kboy"),
-                        Text("21.5K subscribers"),
-                      ],
+                        width: 80,
+                        child: ClipRRect(
+                            borderRadius: BorderRadiusDirectional.circular(50),
+                            child: Image.asset("assets/images/faceIcon.jpg"))),
+                    const Padding(
+                      padding: EdgeInsets.all(15),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "凡才プログラマー",
+                            style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            "@Kboy",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          Text(
+                            "チャンネル登録者数 2.16万人・650本の動画",
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 141, 140, 140)),
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text("Subscribed"),
-                    Icon(Icons.notifications),
-                  ],
+                const Padding(
+                  padding: EdgeInsets.only(bottom: 15),
+                  child: Center(
+                    child: Text(
+                      "ITエンジニアとして、僕のありのままで作っていくことがテーマです。",
+                      style: TextStyle(
+                          fontSize: 12,
+                          color: Color.fromARGB(255, 141, 140, 140)),
+                    ),
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: SizedBox(
-                          width: 200,
-                          child: Image.asset("assets/images/header.jpeg")),
-                    ),
-                    const Expanded(
-                      child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "環境と習慣は密接に関わっている",
-                              style: TextStyle(
-                                  fontSize: 17, fontWeight: FontWeight.bold),
-                            ),
-                            Text("244 views . 2 days ago"),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("チャンネル登録"),
+                      Icon(Icons.notifications),
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(40),
-                      child: SizedBox(
-                        width: 200,
-                        child: Image.asset(
-                          "assets/images/header.jpeg",
-                        ),
-                      ),
-                    ),
-                    const Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "石の上にも三年かと言われているが定かではない",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 17),
-                            ),
-                            Text("1444 views . 5 days ago")
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(25),
-                      child: SizedBox(
-                        width: 200,
-                        child: Image.asset(
-                          "assets/images/header.jpeg",
-                        ),
-                      ),
-                    ),
-                    const Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "犬も歩けば棒に当たるとも限らないと言われている",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 17,
-                              ),
-                            ),
-                            Text("888 views . 13 days ago")
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 200,
-                      child: ClipRRect(
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ClipRRect(
                         borderRadius: BorderRadius.circular(20),
+                        child: SizedBox(
+                            width: 200,
+                            child: Image.asset("assets/images/sample.jpeg")),
+                      ),
+                      const Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "環境と習慣は密接に関わっている",
+                                style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
+                              Text(
+                                "244 views . 2 days ago",
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 141, 140, 140)),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(40),
+                        child: SizedBox(
+                          width: 200,
+                          child: Image.asset(
+                            "assets/images/sample.jpeg",
+                          ),
+                        ),
+                      ),
+                      const Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "石の上にも三年かと言われているが定かではない",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17,
+                                    color: Colors.white),
+                              ),
+                              Text("1444 views . 5 days ago",
+                                  style: TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 141, 140, 140)))
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(25),
+                        child: SizedBox(
+                          width: 200,
+                          child: Image.asset(
+                            "assets/images/sample.jpeg",
+                          ),
+                        ),
+                      ),
+                      const Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "犬も歩けば棒に当たるとも限らないと言われている",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              Text("888 views . 13 days ago",
+                                  style: TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 141, 140, 140)))
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        width: 200,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            "assets/images/sample.jpeg",
+                          ),
+                        ),
+                      ),
+                      const Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "犬も歩けば棒に当たるとも限らないと言われている",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              Text("888 views . 13 days ago",
+                                  style: TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 141, 140, 140)))
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        width: 200,
                         child: Image.asset(
-                          "assets/images/header.jpeg",
+                          "assets/images/sample.jpeg",
                         ),
                       ),
-                    ),
-                    const Expanded(
-                      child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "犬も歩けば棒に当たるとも限らないと言われている",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 17,
+                      const Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "犬も歩けば棒に当たるとも限らないと言われている",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17,
+                                  color: Colors.white,
+                                ),
                               ),
-                            ),
-                            Text("888 views . 13 days ago")
-                          ],
+                              Text("888 views . 13 days ago",
+                                  style: TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 141, 140, 140)))
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 200,
-                      child: Image.asset(
-                        "assets/images/header.jpeg",
-                      ),
-                    ),
-                    const Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "犬も歩けば棒に当たるとも限らないと言われている",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 17,
-                              ),
-                            ),
-                            Text("888 views . 13 days ago")
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
