@@ -61,6 +61,7 @@ flutter:
     - assets/images/header.jpg
     - assets/images/faceIcon.jpg
     - assets/images/sample.jpeg
+    - assets/images/hiroyuki.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
