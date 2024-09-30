@@ -257,6 +257,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    const Color.fromARGB(255, 46, 45, 45),
                                 maximumSize: const Size(120, 70),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10))),
@@ -264,7 +266,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               "人気の動画",
                               style: TextStyle(
                                   fontSize: 13,
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontWeight: FontWeight.bold),
                             ),
                           ),
@@ -274,6 +276,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    const Color.fromARGB(255, 46, 45, 45),
                                 maximumSize: const Size(90, 70),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10))),
@@ -281,7 +285,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               "古い順",
                               style: TextStyle(
                                   fontSize: 13,
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontWeight: FontWeight.bold),
                             ),
                           ),
